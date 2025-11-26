@@ -4,30 +4,30 @@ import FadeIn from './FadeIn';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative bg-gradient-to-br from-brand-blue to-brand-purple text-white min-h-[90vh] flex items-center pt-24 pb-20 md:pt-0 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-brand-blue to-brand-purple text-white min-h-[90vh] flex items-center pt-28 pb-20 md:pt-0 overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-purple opacity-20 blur-[100px] rounded-full transform translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 
       <div className="absolute top-6 left-6 md:top-10 md:left-10 z-20">
-        <span className="text-white font-bold text-xl tracking-wider opacity-90">CENTUMILIA</span>
+        <span className="text-white font-bold text-lg md:text-xl tracking-wider opacity-90">CENTUMILIA</span>
       </div>
 
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
         <div className="max-w-2xl">
           <FadeIn>
             <div className="inline-block bg-white/10 rounded-full px-4 py-1 mb-6 border border-white/20 backdrop-blur-sm">
-              <span className="text-brand-cyan font-bold text-sm tracking-wide">MÉTODO BBF</span>
+              <span className="text-brand-cyan font-bold text-xs md:text-sm tracking-wide">MÉTODO BBF</span>
             </div>
           </FadeIn>
           
           <FadeIn delay={100}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               90% das empresas falham no marketing por não dominarem o <span className="text-brand-green">BÁSICO.</span>
             </h1>
           </FadeIn>
           
           <FadeIn delay={200}>
-            <p className="text-lg md:text-xl lg:text-2xl font-medium text-white/90 mb-10 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-white/90 mb-8 md:mb-10 leading-relaxed">
               O Sistema Completo em 7 Pilares para Você Parar de Jogar Dinheiro Fora e Construir Marketing que Funciona.
             </p>
           </FadeIn>
@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 items-start">
               <a
                 href="#produtos"
-                className="group bg-brand-cta hover:bg-brand-ctaHover text-white font-bold text-lg px-10 py-5 rounded-lg shadow-lg transform transition-all hover:scale-105 hover:shadow-glow border-b-4 border-yellow-700 active:border-b-0 active:translate-y-1 flex items-center gap-2"
+                className="group w-full sm:w-auto bg-brand-cta hover:bg-brand-ctaHover text-white font-bold text-base md:text-lg px-8 md:px-10 py-4 md:py-5 rounded-lg shadow-lg transform transition-all hover:scale-105 hover:shadow-glow border-b-4 border-yellow-700 active:border-b-0 active:translate-y-1 flex items-center justify-center gap-2"
               >
                 QUERO ESTRUTURAR MEU MARKETING
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
           </FadeIn>
           
           <FadeIn delay={400}>
-            <div className="mt-8 flex flex-wrap gap-4 text-sm text-white/80 font-medium">
+            <div className="mt-8 flex flex-wrap gap-y-2 gap-x-4 text-sm text-white/80 font-medium">
               <span className="flex items-center gap-1"><Check className="text-brand-green w-4 h-4" /> Sem enrolação</span>
               <span className="flex items-center gap-1"><Check className="text-brand-green w-4 h-4" /> Linguagem simples</span>
               <span className="flex items-center gap-1"><Check className="text-brand-green w-4 h-4" /> Aplicável hoje mesmo</span>

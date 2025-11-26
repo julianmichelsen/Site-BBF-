@@ -34,9 +34,9 @@ const FAQSection: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-white border-t border-gray-100">
-      <div className="container mx-auto px-6 max-w-3xl">
-        <FadeIn className="text-center mb-12">
+    <section className="py-16 md:py-20 bg-white border-t border-gray-100">
+      <div className="container mx-auto px-4 md:px-6 max-w-3xl">
+        <FadeIn className="text-center mb-10 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-black mb-4">Perguntas Frequentes</h2>
           <p className="text-gray-600">Tire suas dúvidas e decida com segurança.</p>
         </FadeIn>
@@ -51,22 +51,23 @@ const FAQSection: React.FC = () => {
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex justify-between items-center p-6 text-left focus:outline-none"
+                  className="w-full flex justify-between items-center p-5 md:p-6 text-left focus:outline-none"
+                  aria-expanded={openIndex === index}
                 >
-                  <span className={`font-bold text-lg ${openIndex === index ? 'text-brand-blue' : 'text-gray-800'}`}>
+                  <span className={`font-bold text-base md:text-lg pr-4 ${openIndex === index ? 'text-brand-blue' : 'text-gray-800'}`}>
                     {faq.question}
                   </span>
-                  <div className={`p-1 rounded-full transition-colors ${openIndex === index ? 'bg-brand-blue text-white' : 'bg-gray-100 text-gray-500'}`}>
+                  <div className={`flex-shrink-0 p-1 rounded-full transition-colors ${openIndex === index ? 'bg-brand-blue text-white' : 'bg-gray-100 text-gray-500'}`}>
                     {openIndex === index ? <Minus className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
                   </div>
                 </button>
                 
                 <div 
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    openIndex === index ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
+                    openIndex === index ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <div className="p-6 pt-0 text-gray-600 leading-relaxed border-t border-transparent">
+                  <div className="p-5 md:p-6 pt-0 text-sm md:text-base text-gray-600 leading-relaxed border-t border-transparent">
                     {faq.answer}
                   </div>
                 </div>

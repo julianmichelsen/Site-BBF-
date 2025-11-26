@@ -25,8 +25,8 @@ const SolutionSection: React.FC = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <FadeIn className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl font-bold text-brand-black mb-4">Apresento o Método BBF</h2>
-          <p className="text-xl text-gray-600">Os 7 Pilares que TODA empresa precisa ter funcionando antes de tentar qualquer tática avançada.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-brand-black mb-4">Apresento o Método BBF</h2>
+          <p className="text-lg md:text-xl text-gray-600">Os 7 Pilares que TODA empresa precisa ter funcionando antes de tentar qualquer tática avançada.</p>
         </FadeIn>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -34,9 +34,13 @@ const SolutionSection: React.FC = () => {
             <FadeIn 
                 key={pillar.number} 
                 delay={index * 100}
-                className={`h-full ${index === 6 ? 'md:col-span-2 lg:col-span-1 xl:col-span-2' : ''}`}
+                className={`h-full ${
+                    index === 6 
+                    ? 'md:col-span-2 lg:col-span-3 xl:col-span-2' // Centraliza o último item em diferentes breakpoints
+                    : ''
+                }`}
             >
-              <div className="h-full p-8 border border-gray-200 rounded-xl hover:shadow-xl transition-all duration-300 bg-white group hover:border-transparent hover:ring-2 hover:ring-gray-100">
+              <div className="h-full p-8 border border-gray-200 rounded-xl hover:shadow-xl transition-all duration-300 bg-white group hover:border-transparent hover:ring-2 hover:ring-gray-100 flex flex-col items-start text-left">
                 <div className={`mb-6 transform group-hover:scale-110 transition duration-300 ${pillar.color}`}>
                   {pillar.icon}
                 </div>
