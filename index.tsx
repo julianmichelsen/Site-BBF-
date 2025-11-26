@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+// CSS é carregado via CDN no index.html para garantir funcionamento no preview
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
